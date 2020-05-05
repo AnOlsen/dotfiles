@@ -1,0 +1,9 @@
+{
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "'Hack', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 30,
+    "workbench.colorTheme": "Horizon",
+    "workbench.iconTheme": "material-icon-theme"
+}

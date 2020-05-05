@@ -1,0 +1,34 @@
+{
+	"New public function": {
+		"prefix": "pubf",
+		"body": [
+			"public function $1()",
+			"{",
+			"$2",
+			"}"
+		],
+		"description": "Create a public function"
+	},
+
+	"New private function": {
+		"prefix": "prif",
+		"body": [
+			"private function $1()",
+			"{",
+			"$2",
+			"}"
+		],
+		"description": "Create a private function"
+	},
+
+	"New protected function": {
+		"prefix": "prof",
+		"body": [
+			"private function $1()",
+			"{",
+			"$2",
+			"}"
+		],
+		"description": "Create a protected function"
+	},
+}
