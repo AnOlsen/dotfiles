@@ -17,4 +17,4 @@ sudo apt upgrade -y
 # Load new shell
 source ~/.bashrc
 
-echo "Setup complete!"
+echo "Machine setup complete!"

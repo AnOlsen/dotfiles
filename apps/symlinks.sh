@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Adding application symlinks"
+
 # Remove existing files first
 sudo rm -rf ~/.config/Code/User/snippets
 sudo rm -f ~/.config/Code/User/keybindings.json

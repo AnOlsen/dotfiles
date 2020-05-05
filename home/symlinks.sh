@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Setting up home symlinks..."
+
 # Remove existing files first
 rm -f ~/.bashrc
 rm -f ~/.bash_aliases
