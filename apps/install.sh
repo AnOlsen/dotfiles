@@ -17,14 +17,14 @@ apt-cache policy docker-ce
 echo "Installing applications..."
 
 # Install all applications in the aptlist file
-applications=$APPLISTS"/apt"
+applications="lists/apt"
 while IFS= read -r app
 do
   sudo apt -y install $app
 done < "$applications"
 
 # Install all applications in the snaplist file
-applications=$APPLISTS"/snap"
+applications="lists/snap"
 while IFS= read -r app
 do
   sudo snap install $app
@@ -40,7 +40,7 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Install VSCode extensions
 echo "Installing VSCode extensions"
-extensions=$APPS"/vscode/extensions"
+extensions="~/.dotfiles/apps/vscode/extensions"
 while IFS= read -r extension
 do
   code --install-extension $extension

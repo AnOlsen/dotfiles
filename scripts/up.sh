@@ -4,6 +4,6 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}Starting dev environment${NC}"
 
-cd ~/Projects/emaerket
+cd ~/projects/emaerket
 php artisan docker:start
 google-chrome &> /dev/null
