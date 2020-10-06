@@ -15,5 +15,5 @@ sudo apt upgrade -y
 source $DIR/apps/install.sh
 source $DIR/home/install.sh
 
-echo "Machine setup complete!"
-echo "Please reload your shell."
+echo -e "${GREEN_TEXT}Machine setup complete!${NORMAL_TEXT}"
+echo -e "${GREEN_TEXT}Please restart your shell${NORMAL_TEXT}"
