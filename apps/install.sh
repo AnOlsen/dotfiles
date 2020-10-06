@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Setting up applications..."
+echo -e "${GREEN_TEXT}Setting up applications...${NORMAL_TEXT}"
 
 # Install apt HTTPS packages
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
@@ -14,17 +14,17 @@ sudo apt update
 # Make sure you are about to install from the Docker repo instead of the default Ubuntu repo
 apt-cache policy docker-ce
 
-echo "Installing applications..."
+echo -e "${GREEN_TEXT}Installing applications...${NORMAL_TEXT}"
 
 # Install all applications in the aptlist file
-applications="lists/apt"
+applications="$DIR/apps/lists/apt"
 while IFS= read -r app
 do
   sudo apt -y install $app
 done < "$applications"
 
 # Install all applications in the snaplist file
-applications="lists/snap"
+applications="$DIR/apps/lists/snap"
 while IFS= read -r app
 do
   sudo snap install $app
@@ -39,8 +39,9 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Install VSCode extensions
-echo "Installing VSCode extensions"
-extensions="~/.dotfiles/apps/vscode/extensions"
+echo -e "${GREEN_TEXT}Installing VSCode extensions${NORMAL_TEXT}"
+
+extensions="$DIR/apps/vscode/extensions"
 while IFS= read -r extension
 do
   code --install-extension $extension
@@ -51,4 +52,6 @@ echo "Adding user to docker group"
 sudo usermod -aG docker ${USER}
 su - ${USER}
 
-echo "Applications installed"
+echo -e "${GREEN_TEXT}Applications installed!${NORMAL_TEXT}"
+
+source symlinks.sh

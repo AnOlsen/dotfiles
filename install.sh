@@ -1,20 +1,19 @@
 #!/bin/sh
 
-echo "Setting up machine..."
+GREEN_TEXT='\033[0;32m'
+NORMAL_TEXT='\033[0m'
 
-# Load env variables before we continue
-source $HOME/.dotfiles/.env
+DIR="$HOME/.dotfiles/"
 
-# Run install scripts
-source $APPS/install.sh
-source $APPS/symlinks.sh
-source $HOMEFILES/install.sh
-source $HOMEFILES/symlinks.sh
+echo -e "${GREEN_TEXT}Setting up machine...${NORMAL_TEXT}"
 
-# Get all upgrades
+# Update machine first
+sudo apt update
 sudo apt upgrade -y
 
-# Load new shell
-source ~/.bashrc
+# Run install scripts
+source $DIR/apps/install.sh
+source $DIR/home/install.sh
 
 echo "Machine setup complete!"
+echo "Please reload your shell."

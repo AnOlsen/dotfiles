@@ -1,6 +1,6 @@
 git
 unzip
-php7.4 php7.4-fpm php7.4-json php7.4-pdo php7.4-mysql php7.4-zip php7.4-mbstring php7.4-curl php7.4-xml
+php7.4 php7.4-fpm php7.4-json php7.4-pdo php7.4-mysql php7.4-zip php7.4-mbstring php7.4-curl php7.4-xml php7.4-tidy
 google-chrome-stable
 visual-studio-code
 yarn
@@ -10,4 +10,3 @@ flameshot
 docker-ce
 network-manager-gnome
 network-manager-openvpn
-mysql-workbench

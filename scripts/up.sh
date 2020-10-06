@@ -1,8 +1,7 @@
-# Text output colour
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+GREEN_TEXT='\033[0;32m'
+NORMAL_TEXT='\033[0m'
 
-echo -e "${GREEN}Starting dev environment${NC}"
+echo -e "${GREEN_TEXT}Starting dev environment${NORMAL_TEXT}"
 
 cd ~/projects/emaerket
 docker-compose up -d
