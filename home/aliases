@@ -11,6 +11,7 @@ alias fucksake='xrandr -o normal' #In case the screen flips
 alias giefssh='cat ~/.ssh/id_rsa.pub'
 alias aliases='cat ~/.bash_aliases'
 alias edithosts='sudo nano /etc/hosts'
+alias bell='. ~/.bell.sh'
 
 # Apt
 alias sagi='sudo apt-get install'
@@ -42,12 +43,13 @@ alias wip='git add . && git commit -m "wip"'
 alias nah='git reset HEAD --hard'
 
 # Development
-alias up='. ~/configs/home/up.sh'
+alias up='. ~/.dotfiles/scripts/up.sh'
+alias remigrate='. ~/.dotfiles/scripts/rerun-last-migration.sh'
 alias art='php artisan'
 alias punit='vendor/bin/phpunit'
 alias pf='vendor/bin/phpunit --filter='
 alias ackc='ack --ignore-dir={storage,vendor,laradock}'
-alias fixphpstorm='sudo ibus restart'
+alias fixphpstorm='ibus restart'
 
 # VPN
 alias startvpn='sudo systemctl start openvpn@client'
