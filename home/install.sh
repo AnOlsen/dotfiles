@@ -9,8 +9,8 @@ git clone git@github.com:emaerket/emaerket.git $HOME/projects/emaerket
 echo -e "${GREEN_TEXT}Adding home symlinks...${NORMAL_TEXT}"
 
 # Remove existing files first
-rm -f $HOME/.bashrc
-rm -f $HOME/.bash_aliases
+rm $HOME/.bashrc
+rm $HOME/.bash_aliases
 
 ln -s $HOME/.dotfiles/home/bashrc $HOME/.bashrc
 ln -s $HOME/.dotfiles/home/aliases $HOME/.bash_aliases
